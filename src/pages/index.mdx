@@ -92,6 +92,8 @@ Visuotactile sensing offers rich contact information that can help mitigate perf
 We introduce GelFusion, a framework designed to enhance policies by integrating visuotactile feedback, specifically from high-resolution GelSight sensors. GelFusion using a vision-dominated cross-attention fusion mechanism incorporates visuotactile information into policy learning. To better provide rich contact information, the framework's core component is our dual-channel visuotactile feature representation, simultaneously leveraging both texture-geometric and dynamic interaction features. 
 We evaluated GelFusion on three contact-rich tasks: surface wiping, peg insertion, and fragile object pick-and-place. Outperforming baselines, GelFusion shows the value of its structure in improving the success rate of policy learning.
 
+---
+
 ## Visuotactile sensor - Gelsight
 
 GelSight, a classic high-resolution visuotactile sensor, captures membrane deformation with an internal camera to encode tactile information. provides rich contact information detailing **surface properties** and **interaction dynamics**.
@@ -109,6 +111,14 @@ To address the fusion challenge, we introduce GelFusion, a **vision-led** framew
   <Image slot="figure" source={Framework} altText="Framework" />
   <span slot="caption">Network of GelFusion.</span>
 </Figure>
+
+The Cross-attention module fuses visual and tactile information by calculating weights based on the **visual query** to dynamically emphasize the relevance of each modality's features. These weighted features are then combined to form a fused representation that guides the diffusion policy.
+
+<Figure>
+  <Image slot="figure" source={Cross_attention} altText="Cross_attention" />
+  <span slot="caption">Cross-attention module.</span>
+</Figure>
+
 
 
 ## BibTeX citation
