@@ -1,8 +1,8 @@
 ---
 layout: ../layouts/Layout.astro
-title: GelFusion 
+title: GelFusion: Enhancing Robotic Manipulation under Visual Constraints via Visuotactile Fusion
 description: Enhancing Robotic Manipulation under Visual Constraints via Visuotactile Fusion
-favicon: favicon.svg
+favicon: Gel.png
 thumbnail: screenshot-light.png
 ---
 
@@ -24,6 +24,10 @@ import Splat from "../components/Splat.tsx"
 import dogsDiffc from "../assets/dogs-diffc.png"
 import dogsTrue from "../assets/dogs-true.png"
 
+import Framework from "../assets/Framework.png"
+import Framework from "../assets/Cross_attention.png"
+import Framework from "../assets/sensor.png"
+
 
 import CodeBlock from "../components/CodeBlock.astro";
 import Table from "../components/Table.astro";
@@ -31,7 +35,6 @@ export const components = {pre: CodeBlock, table: Table}
 
 <Header
   title={frontmatter.title}
-  description={frontmatter.description}
   authors={[
     {
       name: "Shulong Jinag",
@@ -82,6 +85,7 @@ export const components = {pre: CodeBlock, table: Table}
 {/*<Video source={outside}>*/}
 
 
+
 ## Abstract
 
 Visuotactile sensing offers rich contact information that can help mitigate performance bottlenecks in imitation learning, particularly under vision-limited conditions, such as ambiguous visual cues or occlusions. Effectively fusing visual and visuotactile modalities, however, presents ongoing challenges. 
@@ -94,8 +98,8 @@ We evaluated GelFusion on three contact-rich tasks: surface wiping, peg insertio
 Use the figure component to display images, videos, equations, or any other element, with an optional caption.
 
 <Figure>
-  <Image slot="figure" source={transformer} altText="Diagram of the transformer deep learning architecture." />
-  <span slot="caption">Diagram of the transformer deep learning architecture.</span>
+  <Image slot="figure" source={Framework} />
+  <span slot="caption">Network of GelFusion.</span>
 </Figure>
 
 ## Image comparison slider
