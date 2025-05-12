@@ -31,37 +31,33 @@ export const components = {pre: CodeBlock, table: Table}
 
 <Header
   title={frontmatter.title}
+  description={frontmatter.description}
   authors={[
     {
-      name: "Roman Hauksson",
-      url: "https://roman.technology",
-      institution: "Independent",
-      notes: ["*", "†"],
+      name: "Shulong Jinag",
+      notes: ["1"],
     },
     {
-      name: "Author Two",
-      institution: "Institution Two",
-      notes: ["*", "†"],
+      name: "Shiqi Zhao",
+      notes: ["1"],
     },
     {
-      name: "Author Three",
-      institution: "Institution Three",
-      notes: ["†"],
+      name: "Yuxuan Fan",
+      notes: ["2"],
     },
     {
-      name: "Author Four",
-      institution: "Institution Four",
+      name: "Peng Yin",
+      notes: ["1"],
     },
   ]}
-  conference="Conference Name"
   notes={[
     {
-      symbol: "*",
-      text: "author note one",
+      symbol: "1",
+      text: "City University of Hong Kong",
     },
     {
-      symbol: "†",
-      text: "author note two",
+      symbol: "2",
+      text: "The Hong Kong University of Science and Technology (Guangzhou)",
     },
   ]}
   links={[
@@ -72,31 +68,26 @@ export const components = {pre: CodeBlock, table: Table}
     },
     {
       name: "Code",
-      url: "https://github.com/RomanHauksson/academic-project-astro-template",
+      url: "",
       icon: "ri:github-line",
     },
     {
       name: "arXiv",
       url: "",
       icon: "academicons:arxiv",
-    },
-    {
-      name: "Bluesky",
-      url: "",
-      icon: "ri:bluesky-line"
     }
   ]}
   />
 
-<Video source={outside} />
+<!-- <Video source={outside} /> -->
 
-<HighlightedSection>
+<!-- <HighlightedSection> -->
 
 ## Abstract
 
 This is a live demo for a template you can use to create a simple project page for your research paper. See the code for the template and instructions on how to use it yourself [here](https://github.com/RomanHauksson/academic-project-astro-template). It's made with the [Astro web framework](https://astro.build/) and styled with [Tailwind CSS](https://tailwindcss.com/). You write the content in [MDX](https://mdxjs.com/), which enables markdown formatting like **bold**, _italics_, and ~strikethrough~, as well as custom components like <SmallCaps>small caps.</SmallCaps>
 
-</HighlightedSection>
+<!-- </HighlightedSection> -->
 
 ## Figures
 
