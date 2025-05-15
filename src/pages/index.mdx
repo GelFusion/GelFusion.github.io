@@ -22,6 +22,7 @@ import Framework from "../assets/Framework.png"
 import Cross_attention from "../assets/Cross_attention.png"
 import sensor from "../assets/sensor.png"
 import InsertationLongDemo from "../assets/Insertation.mp4"
+import comming_soon from "../assets/comming.png"
 
 
 import CodeBlock from "../components/CodeBlock.astro";
@@ -116,14 +117,99 @@ The Cross-attention module fuses visual and tactile information by calculating w
 </Figure>
 
 ## Task Evaluatio
-### Wiping Task
 
-<Video source={InsertationLongDemo} />
+### Wiping Task
+The experiment evaluated GelFusion's assistance to robots in surface wiping tasks, specifically addressing vision's limitations such as **depth ambiguity** in establishing precise contact and maintaining consistent pressure and orientation for effective cleaning. It comprised two critical contact phases: initially establishing contact from an arbitrary height, followed by maintaining consistent pressure and orientation during the wiping action.
+
+### Typical Failure Case
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Float Wiping.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Overpress.</span>
+  </Figure>
+</TwoColumns>
+
+### Different Test Scenarios
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Shapes.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Pisitions.</span>
+  </Figure> 
+</TwoColumns>
+
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Shapes.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Pisitions.</span>
+  </Figure> 
+</TwoColumns>
+
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Shapes.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Pisitions.</span>
+  </Figure> 
+</TwoColumns>
+
+
+{/* =============================================================================================== */}
+
 
 ### Insertation Task
+The peg insertion task, designed to evaluate precise alignment capabilities, primarily challenges robots by simulating vision-limited scenarios, particularly during the final insertion phase where **visual occlusion is inherent**. This task, comprising critical phases including grasping, transport, alignment, insertion, and release, was evaluated under significant randomization of peg and puzzle box positions and orientations, with distractor holes present, to assess the policy's robustness and reliance on tactile feedback for success.
+
+<Figure>
+<Video slot="figure" source={InsertationLongDemo} />
+<span slot="caption">Insertation Long-Term Test.</span>
+</Figure>
+
+### Typical Failure Case
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Shapes.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Different Line Pisitions.</span>
+  </Figure> 
+</TwoColumns>
+
+{/* =============================================================================================== */}
+
+
 
 ### Chips Pick Task
+The task objective is robotic grasping of highly fragile objects like potato chips. As brittle materials prone to sudden fracture under excessive force, **force control** is crucial for maintaining theirstructural integrity. This task highlights the limitations of relying solely on wrist-camera vision, which lacks the necessary force-sensitive feedback to prevent such instantaneous damage.
 
+### Demonstration
+
+<TwoColumns>
+  <Figure slot="left">  
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Failure Case.</span> 
+  </Figure>
+  <Figure slot="right">
+    <Image slot="figure" source={comming_soon} />
+    <span slot="caption">Success Case.</span>
+  </Figure> 
+</TwoColumns>
 
 ---
 
