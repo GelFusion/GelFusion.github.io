@@ -15,6 +15,7 @@ import Image from "../components/Image.astro";
 import TwoColumns from "../components/TwoColumns.astro";
 import YouTubeVideo from "../components/YouTubeVideo.astro";
 import LaTeX from "../components/LaTeX.astro";
+import Notes from "../components/Notes.astro";
 
 import { ImageComparison } from "../components/ImageComparison.tsx";
 
@@ -126,6 +127,10 @@ The Cross-attention module fuses visual and tactile information by calculating w
 
 ### Wiping Task
 The experiment evaluated GelFusion's assistance to robots in surface wiping tasks, specifically addressing vision's limitations such as **depth ambiguity** in establishing precise contact and maintaining consistent pressure and orientation for effective cleaning. It comprised two critical contact phases: initially establishing contact from an arbitrary height, followed by maintaining consistent pressure and orientation during the wiping action.
+
+<Notes>
+  <p>We used a wiping task to evaluate the performance of our framework. The wiping task is a contact-rich task that requires the robot to maintain contact with the surface while applying a consistent force. The robot must also be able to adapt to different surface textures and shapes.</p>
+</Notes>
 
 ### Typical Failure Case
 <TwoColumns>
