@@ -31,6 +31,14 @@ import down_wiping from "../assets/down_wiping.mp4"
 import chipSuccess from "../assets/chipSuccess.mp4"
 import chipFail from "../assets/chipFail.mp4"
 import Diff_Shapes1 from "../assets/Diff_Shapes1.mp4"
+import Diff_Shapes2 from "../assets/Diff_Shapes2.mp4"
+import Diff_Shapes3 from "../assets/Diff_Shapes3.mp4"
+import Bad_Alignment from "../assets/Bad_Alignment.mp4"
+import Collision from "../assets/Collision.mp4"
+import Float_Wiping from "../assets/Float_Wiping.mp4"
+import Overpress from "../assets/Overpress.mp4"
+
+
 
 
 import CodeBlock from "../components/CodeBlock.astro";
@@ -136,11 +144,11 @@ To better handle the writing on the whiteboard in the observed images, we adjust
 ### Typical Failure Case
 <TwoColumns>
   <Figure slot="left">  
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Float_Wiping} altText="Framework" />
     <span slot="caption">Float Wiping.</span> 
   </Figure>
   <Figure slot="right">
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Overpress} altText="Framework" />
     <span slot="caption">Overpress.</span>
   </Figure>
 </TwoColumns>
@@ -159,7 +167,7 @@ To better handle the writing on the whiteboard in the observed images, we adjust
 
 <TwoColumns>
   <Figure slot="left">  
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Diff_Shapes2} altText="Framework" />
     <span slot="caption">Different Line Shapes.</span> 
   </Figure>
   <Figure slot="right">
@@ -170,7 +178,7 @@ To better handle the writing on the whiteboard in the observed images, we adjust
 
 <TwoColumns>
   <Figure slot="left">  
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Diff_Shapes3} altText="Framework" />
     <span slot="caption">Different Line Shapes.</span> 
   </Figure>
   <Figure slot="right">
@@ -194,11 +202,11 @@ The peg insertion task, designed to evaluate precise alignment capabilities, pri
 ### Typical Failure Case
 <TwoColumns>
   <Figure slot="left">  
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Bad_Alignment} altText="Framework" />
     <span slot="caption">Bad alignment.</span> 
   </Figure>
   <Figure slot="right">
-    <Image slot="figure" source={comming_soon} altText="Framework" />
+    <Video slot="figure" source={Collision} altText="Framework" />
     <span slot="caption">Transport Collision.</span>
   </Figure> 
 </TwoColumns>
