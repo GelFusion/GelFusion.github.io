@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    type: "tip" | "info" | "warning" | "danger";
+    title?: string;
+}
+
+const { type, title } = Astro.props;
+
+// 定义不同类型的样式和图标名称
+const noteConfig = {
+    tip: {
+        bgColor: "bg-green-100 dark:bg-green-900",
+        borderColor: "border-green-500 dark:border-green-700",
+        textColor: "text-green-800 dark:text-green-200",
+        icon: "check-circle", // astro-icon 的图标名称
+        titlePrefix: "Tip",
+    },
+    info: {
+        bgColor: "bg-blue-100 dark:bg-blue-900",
+        borderColor: "border-blue-500 dark:border-blue-700",
+        textColor: "text-blue-800 dark:text-blue-200",
+        icon: "info",
+        titlePrefix: "Note", // GitHub 通常用 Note 作为 Info 的前缀
+    },
+    warning: {
+        bgColor: "bg-yellow-100 dark:bg-yellow-900",
+        borderColor: "border-yellow-500 dark:border-yellow-700",
+        textColor: "text-yellow-800 dark:text-yellow-200",
+        icon: "alert-triangle",
+        titlePrefix: "Warning",
+    },
+    danger: {
+        bgColor: "bg-red-100 dark:bg-red-900",
+        borderColor: "border-red-500 dark:border-red-700",
+        textColor: "text-red-800 dark:text-red-200",
+        icon: "x-octagon",
+        titlePrefix: "Danger",
+    },
+};
+
+const config = noteConfig[type] || noteConfig.info; // 默认使用 info 配置
+
+// 确定显示的标题 (如果有传入 title prop，则使用传入的，否则使用默认前缀)
+const displayTitle = title !== undefined ? title : config.titlePrefix;
+---
+
+<div
+    class={`p-4 my-4 rounded-lg border-l-4 ${config.bgColor} ${config.borderColor} ${config.textColor}`}
+>
+    <div class="flex items-start">
+        <!-- Icon -->
+        <div class="flex-shrink-0 mr-3">
+            <Icon name={config.icon} class="w-6 h-6" />
+        </div>
+        <!-- Content -->
+        <div class="flex-grow">
+            <!-- Title -->
+            <h4 class="font-bold mb-1">
+                {displayTitle}
+            </h4>
+            <!-- Children Content -->
+            <div class="prose prose-sm dark:prose-invert max-w-none">
+                <slot />
+            </div>
+        </div>
+    </div>
+</div>
